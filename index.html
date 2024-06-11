@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./ui/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <title>Gaming Online Store | Home</title>
+</head>
+<body id="body">
+<div id="container">
+<header>
+    <div id="logo">
+        <img src="./assets/logo.png">
+    </div>
+    <form>
+        <input type="text" placeholder="Search Product" class="input">
+        <button id="search"><i class="material-icons">search</i></button>
+    </form>
+    <div id="icons">
+        <!--button id="sign-in"><i class="material-icons">person</i></button-->
+        <button id="cart"><i class="material-icons">shopping_cart</i><p id="cart-items-length">0</p></button>
+    </div>
+    <button id="menu"><i class="material-icons">menu</i></button>
+    <nav id="navigation">
+        <i id="close" class="material-icons">close</i>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Trending</a></li>
+        <li><a href="index.html">Woman</a></li>
+        <li><a href="index.html">Men</a></li>
+        <li><a href="index.html">Girls</a></li>
+        <li><a href="index.html">Boys</a></li>
+        <button id="sign-in">Sign In</button>
+        </ul>
+    </nav>
+</header>
+<div id="banner-wrapper">
+    <div id="banner-container">
+        <div id="banner-content">
+            <h1>50% off for all woman winter wear</h1>
+            <button id="shop-now">SHOP NOW</button>
+        </div>
+        <div id="banner-image">
+            <img src="./assets/banner-1.png" alt="Banner Image 1">
+        </div>
+    </div>
+</div>
+<div id="trending-products">
+    <h1>Trending Products</h1>
+<div id="products-grid" class="products-list">
+        <!--div id="product">
+            <img src="./assets/Products/Men's-Regular-Long-Sleeve-T-shirt.png">
+                <h3>Men's Regular Long-Sleeve T-shirt</h3>
+                <strong>R 450.00</strong>
+                <select id="quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <p>Best quality T-short, made with cotton.</p>
+            <button id="Add-to-cart">Add to Cart</button>
+        </div> 
+        <div id="product">
+            <img src="./assets/Products/Boys-Long-Sleeve-T-Shirt.jpg">
+                <h3>Men's Regular Long-Sleeve T-shirt</h3>
+                <strong>R 450.00</strong>
+                <select id="quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <p>Best quality T-short, made with cotton.</p>
+            <button id="Add-to-cart">Add to Cart</button>
+        </div> 
+        <div id="product">
+            <img src="./assets/Products/3-Pack-Girls-Long-Sleeve-T-Shirt.jpg">
+                <h3>Men's Regular Long-Sleeve T-shirt</h3>
+                <strong>R 450.00</strong>
+                <select id="quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <p>Best quality T-short, made with cotton.</p>
+            <button id="Add-to-cart">Add to Cart</button>
+        </div> 
+        <div id="product">
+            <img src="./assets/Products/Men's-Regular-Long-Sleeve-T-shirt.png">
+                <h3>Men's Regular Long-Sleeve T-shirt</h3>
+                <strong>R 450.00</strong>
+                <select id="quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <p>Best quality T-short, made with cotton.</p>
+            <button id="Add-to-cart">Add to Cart</button>
+        </div> 
+        <div id="product">
+            <img src="./assets/Products/Men's-Regular-Long-Sleeve-T-shirt.png">
+                <h3>Men's Regular Long-Sleeve T-shirt</h3>
+                <strong>R 450.00</strong>
+                <select id="quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <p>Best quality T-short, made with cotton.</p>
+            <button id="Add-to-cart">Add to Cart</button>
+        </div> 
+        <div id="product">
+            <img src="./assets/Products/Men's-Regular-Long-Sleeve-T-shirt.png">
+                <h3>Men's Regular Long-Sleeve T-shirt</h3>
+                <strong>R 450.00</strong>
+                <select id="quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <p>Best quality T-short, made with cotton.</p>
+            <button id="Add-to-cart">Add to Cart</button>
+        </div--> 
+</div>
+</div>
+<div id="suggested-products">
+    <h2>Suggested Products</h2>
+</div>
+
+<div id="footer">Footer</div>
+</div>
+<script type="text/javascript" src="./ui/javascript/slider.js"></script>
+<script type="module" src="./ui/javascript/amazon.js"></script>
+</body>
+</html>
