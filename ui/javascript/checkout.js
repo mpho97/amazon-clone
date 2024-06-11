@@ -31,7 +31,7 @@ cart.forEach((cartItem) =>{
                 <p>R ${formatCorrency(isAlreadyintheCart.price)}</p>
                 <span>Quantity: ${cartItem.Quantity}</span>
                 <span id="update">Update</span>
-                <span id="delete">Delete</span>
+                <span id="delete" id="delete-links">Delete</span>
             </div>
     </div>
         <div id="product-radio">
@@ -51,6 +51,7 @@ cart.forEach((cartItem) =>{
 });
 
 document.querySelector('.product-card').innerHTML = OrderSummeryHTML;
+
 
 
 
