@@ -13,9 +13,11 @@
 <body id="body">
 <div id="container">
 <header>
-    <div id="logo">
-        <img src="./assets/logo.png">
-    </div>
+    <a href="index.html">
+        <div id="logo">
+            <img src="./assets/logo.png">
+        </div>
+    </a>
     <h2>Checkout(3 item)</h2>
     <div id="icons">
         <!--button id="sign-in"><i class="material-icons">person</i></button-->
@@ -38,42 +40,9 @@
 <div id="container-order">
     <h2>Review your order</h2>
     <br>
-    <div class="checkout">
+    <div class="checkout" id="cart-products">
 
-    <div id="product-card">
-        
-        <div id="product-details">
-        <div id="row1">
-        <h3>Delivery date: Thursday, 06 June 2024</h3>
-        <br>
-        <img src="./assets/Products/3-Pack-Girls-Long-Sleeve-T-Shirt.jpg" alt=""/>
-        </div>
-        <div id="row2">
-        <p>R 250.00</p>
-        <span>Quantity: 2</span>
-        <span id="update">Update</span>
-        <span id="delete">Delete</span>
-        </div>
-        </div>
-        <div id="product-radio">
-            <h3>Choose a delivery option:</h3>
-            <br>
-            <input type="radio" value="Thursday, 06 June 2024"/><span>Thursday, 06 June 2024</span>
-            <p>FREE SHIPPING</p>
-            <input type="radio" value="Friday, 07 June 2024"/><span>Friday, 07 June 2024</span>
-            <p>R20.00</p>
-            <input type="radio" value="Monday, 10 June 2024"/><span>Monday, 10 June 2024</span>
-            <p>R10.00</p>
-        </div>
-    </div>
-
-
-
-
-    
-
-
-
+    <div id="product-card" class="product-card"></div>
     <div id="order-summery">
         <h3>Order Summery</h3>
         <div id="flex">
@@ -105,6 +74,6 @@
 <div id="footer">Footer</div>
 </div>
 <script type="text/javascript" src="./ui/javascript/slider.js"></script>
-<script type="module" src="./ui/javascript/amazon.js"></script>
+<script type="module" src="./ui/javascript/checkout.js"></script>
 </body>
 </html>

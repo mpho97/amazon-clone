@@ -9,7 +9,7 @@ export const products = [{
     name: "Girl's Long-Sleeve T-shirt",
     image: "./assets/Products/3-Pack-Girls-Long-Sleeve-T-Shirt.jpg",
     price: '35000',
-    description: 'Best quality T-short, made with cotton.'
+    description: 'Best quality T-short, made with cotton and wool.'
 },{
     id: "c123H-ze698-fg3d6-6dg00",
     name: "Boy's  Long-Sleeve T-shirt",

@@ -6,23 +6,32 @@
     <link rel="stylesheet" type="text/css" href="./ui/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/-->
     <!--Let browser know website is optimized for mobile-->
+    <link rel="icon" type="img/png" href="./assets/logo.png">
     <title>Gaming Online Store | Home</title>
 </head>
 <body id="body">
 <div id="container">
 <header>
-    <div id="logo">
-        <img src="./assets/logo.png">
-    </div>
+    <a href="index.html">
+        <div id="logo">
+            <img src="./assets/logo.png">
+        </div>
+    </a>
+    
     <form>
         <input type="text" placeholder="Search Product" class="input">
         <button id="search"><i class="material-icons">search</i></button>
     </form>
     <div id="icons">
         <!--button id="sign-in"><i class="material-icons">person</i></button-->
-        <button id="cart"><i class="material-icons">shopping_cart</i><p id="cart-items-length">0</p></button>
+        <a href="checkout.html">
+            <button id="cart">
+                <i class="material-icons">shopping_cart</i>
+                <p id="cart-items-length">0</p>
+            </button>
+        </a>
     </div>
     <button id="menu"><i class="material-icons">menu</i></button>
     <nav id="navigation">

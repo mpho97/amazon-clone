@@ -1,14 +1,18 @@
-import {cart} from '../../data/cart.js';
+import {cart, Add_to_Cart} from '../../data/cart.js';
 import {products} from '../../data/products.js';
+import { formatCorrency } from '../utils/money.js';
 
 let TemplateHTML = ''; 
+
+
+
 
 products.forEach((product) => {
     TemplateHTML += `
         <div id="product">
             <img src=${product.image}>
                 <h3>${product.name}</h3>
-                <strong>R${(product.price / 100).toFixed(2)}</strong>
+                <strong>R${formatCorrency(product.price)}</strong>
                 <select id="quantity">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -31,30 +35,13 @@ products.forEach((product) => {
 });
 document.querySelector('.products-list').innerHTML = TemplateHTML;
 
-    function Add_to_Cart(productId){
-        let isAlreadyintheCart;
-        // check if the product is already in the cart
-        
-        cart.forEach((item) =>{
-            if(productId === item.productId){
-                isAlreadyintheCart = item;
-            }
-        });
-        if(isAlreadyintheCart){
-            isAlreadyintheCart.Quantity += 1;
-        }else{
-        cart.push({
-            productId: productId,
-            Quantity: 1
-        });
-    }
-}
+
 function updateCart_Quantity(){
     let totalCartItems = 0;
-    cart.forEach((item)=>{
-    totalCartItems += item.Quantity;
-    })
-
+    cart.forEach((cartItem)=>{
+    totalCartItems += cartItem.Quantity;
+    //Add_to_Cart(productId);
+    });
 document.getElementById('cart-items-length').innerHTML = totalCartItems;
 }
 
