@@ -15,7 +15,7 @@ cart.forEach((cartItem) =>{
         }
        
     })
-    console.log(isAlreadyintheCart);
+    /*console.log(isAlreadyintheCart);*/
     
     OrderSummeryHTML += `
     
@@ -37,18 +37,17 @@ cart.forEach((cartItem) =>{
         <div id="product-radio">
             <h3>Choose a delivery option:</h3>
             <br>
-            <input type="radio" value="Thursday, 06 June 2024"/><span>Thursday, 06 June 2024</span>
+            <input type="radio" name=${isAlreadyintheCart.id} value="Thursday, 06 June 2024"/><span>Thursday, 06 June 2024</span>
             <p>FREE SHIPPING</p>
-            <input type="radio" value="Friday, 07 June 2024"/><span>Friday, 07 June 2024</span>
+            <input type="radio" name=${isAlreadyintheCart.id} value="Friday, 07 June 2024"/><span>Friday, 07 June 2024</span>
             <p>R20.00</p>
-            <input type="radio" value="Monday, 10 June 2024"/><span>Monday, 10 June 2024</span>
+            <input type="radio" name=${isAlreadyintheCart.id} value="Monday, 10 June 2024" /><span>Monday, 10 June 2024</span>
             <p>R10.00</p>
         </div>
     </div>
     <br>
     `;
     //console.log(OrderSummeryHTML);
-   
 });
 
 document.querySelector('.product-card').innerHTML = OrderSummeryHTML;
