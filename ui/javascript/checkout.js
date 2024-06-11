@@ -30,8 +30,8 @@ cart.forEach((cartItem) =>{
                 <p>${isAlreadyintheCart.name}</p>
                 <p>R ${formatCorrency(isAlreadyintheCart.price)}</p>
                 <span>Quantity: ${cartItem.Quantity}</span>
-                <span id="update">Update</span>
-                <span id="delete" id="delete-links">Delete</span>
+                <span id="update-links">Update</span>
+                <span id="delete-links" data-product-id="${isAlreadyintheCart.id}">Delete</span>
             </div>
     </div>
         <div id="product-radio">
@@ -41,16 +41,21 @@ cart.forEach((cartItem) =>{
             <p>FREE SHIPPING</p>
             <input type="radio" name=${isAlreadyintheCart.id} value="Friday, 07 June 2024"/><span>Friday, 07 June 2024</span>
             <p>R20.00</p>
-            <input type="radio" name=${isAlreadyintheCart.id} value="Monday, 10 June 2024" /><span>Monday, 10 June 2024</span>
+            <input type="radio"  name=${isAlreadyintheCart.id} value="Monday, 10 June 2024" /><span>Monday, 10 June 2024</span>
             <p>R10.00</p>
         </div>
     </div>
-    <br>
+    <hr>
     `;
     //console.log(OrderSummeryHTML);
 });
 
 document.querySelector('.product-card').innerHTML = OrderSummeryHTML;
+document.querySelectorAll('#delete-links').forEach((link)=>{
+    link.addEventListener('click', ()=>{
+        alert("product deleted...");
+    });
+});
 
 
 
