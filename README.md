@@ -10,3 +10,6 @@ creating media queries
  # appending cart length to the html element.
  # adding functionality to radio buttons.
  # creating fucntionality to delete links.
+
+ /*now we going to do back end scripting*/
+ # setting servers
