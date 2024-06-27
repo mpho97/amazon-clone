@@ -53,7 +53,9 @@ cart.forEach((cartItem) =>{
 document.querySelector('.product-card').innerHTML = OrderSummeryHTML;
 document.querySelectorAll('#delete-links').forEach((link)=>{
     link.addEventListener('click', ()=>{
-        alert("product deleted...");
+        //alert("product deleted...");
+        const productId = link.dataset.productId;
+        alert(productId);
     });
 });
 

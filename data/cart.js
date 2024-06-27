@@ -28,3 +28,12 @@ export function Add_to_Cart(productId){
 }
 console.log(cart);
 }
+export function remove_from_cart(productId){
+    const newCart = [];
+    cart.forEach((cartItem)=>{
+        if(cartItem.productId !== productId){
+            newCart.push(cartItem);
+        }
+    });
+    cart = newCart;
+}
