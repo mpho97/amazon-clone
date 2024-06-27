@@ -1,4 +1,4 @@
-import {cart} from '../../data/cart.js';
+import {cart, removeFromCart} from '../../data/cart.js';
 import {products} from '../../data/products.js';
 import { formatCorrency } from '../utils/money.js';
 
@@ -19,7 +19,8 @@ cart.forEach((cartItem) =>{
     
     OrderSummeryHTML += `
     
-    <div id="product-details">
+    <div id="product-details" 
+    class="js-class-product-item-container-${isAlreadyintheCart.id}">
     <div id="cartItem">
             <div id="row1">
                 <h3>Delivery date: Thursday, 06 June 2024</h3>
@@ -45,7 +46,6 @@ cart.forEach((cartItem) =>{
             <p>R10.00</p>
         </div>
     </div>
-    <hr>
     `;
     //console.log(OrderSummeryHTML);
 });
@@ -55,7 +55,13 @@ document.querySelectorAll('#delete-links').forEach((link)=>{
     link.addEventListener('click', ()=>{
         //alert("product deleted...");
         const productId = link.dataset.productId;
-        alert(productId);
+        removeFromCart(productId);
+        const container = document.querySelector(
+            `.js-class-product-item-container-${productId}`
+        );
+        //console.log(cart);
+        //console.log(container);
+        container.remove();
     });
 });
 

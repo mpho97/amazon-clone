@@ -22,6 +22,15 @@ button{
     border: none;
     cursor: pointer;
 }
+#Add-to-cart{
+    background-color: var(--orange-color);
+    color: #fff;
+    font-size: 1rem;
+    padding: 17px;
+    width: 180px;
+    border-radius: .5rem;
+    margin: 1rem 0;
+}
 ::placeholder{
     font-weight: bold;
     color: var(--orange-color);
@@ -387,4 +396,61 @@ header form button{
 #order-total span{
     font-weight: 900;
     color: var(--orange-color);
+}
+/*adding media queries*/
+@media(max-width: 768px){
+
+}
+#item{
+    display: block;
+    /*flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+}
+#item h2{
+    padding: 2rem 0;
+    color: var(--orange-color);
+}
+#item-details{
+    display: flex;
+    width: 1000px;
+    background-color: transparent;
+    padding: 7%;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--black-tinted);
+
+}
+#details{
+    color: var(--body-color);
+    font-size: 1rem;
+    font-weight: bold;
+}
+#flex-space-around{
+    display: flex;
+    padding: 1rem 0;
+}
+#flex-space-around select{
+    margin-right: 1rem;
+}
+#color-selection{
+    padding: 1rem 0;
+    display: flex;
+}
+#color-selection span{
+    color: var(--orange-color);
+    margin-right:1rem;
+}
+#pink{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: pink;
+    margin: 0 1rem;
+}
+#black{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #000;
 }

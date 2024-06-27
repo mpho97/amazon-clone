@@ -5,8 +5,6 @@ import { formatCorrency } from '../utils/money.js';
 let TemplateHTML = ''; 
 
 
-
-
 products.forEach((product) => {
     TemplateHTML += `
         <div id="product">
@@ -30,6 +28,7 @@ products.forEach((product) => {
             <button id="Add-to-cart" 
             data-product-id="${product.id}"
             >Add to Cart</button>
+            <span data-type="${product.id}" id="read_more" style="cursor: pointer;">Read More...</span>
         </div>`;
         //console.log(TemplateHTML);
 });
@@ -44,12 +43,17 @@ function updateCart_Quantity(){
     });
 document.getElementById('cart-items-length').innerHTML = totalCartItems;
 }
-
 document.querySelectorAll('#Add-to-cart').forEach((button) =>{
     button.addEventListener('click', ()=>{
         //console.log("product Added to cart...!");
         const productId = button.dataset.productId;
         Add_to_Cart(productId);
         updateCart_Quantity();
+    });
+});
+document.querySelectorAll('#read_more').forEach((button)=>{
+    button.addEventListener('click', ()=>{
+    const productId = read_more.dataset.productId;
+        window.open('item.html');
     });
 });

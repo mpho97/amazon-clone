@@ -1,13 +1,24 @@
-export const cart =[{
-    productId: 'e123f-fd997-fg3d6-8dg23',
-    Quantity: 3
+export let cart = JSON.parse(localStorage.getItem('cart'));
+if(!cart){
+    cart = [{
+        productId: 'e123f-fd997-fg3d6-8dg23',
+        Quantity: 2
+    
+    },{
+        productId: 'b123g-ge654-fg3d6-9dg27',
+        Quantity: 1
+    }
+    ];
 
-},{
-    productId: 'b123g-ge654-fg3d6-9dg27',
-    Quantity: 5
+}else if(cart==""){
+    document.querySelector('.item-details').innerHTML='Cart is empty..... go shopping!';
 }
-];
+
 /*export const cart =[];*/
+
+function saveToStorage(){
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
 export function Add_to_Cart(productId){
     let isAlreadyintheCart;
     // check if the product is already in the cart
@@ -26,9 +37,11 @@ export function Add_to_Cart(productId){
         Quantity: 1
     });
 }
-console.log(cart);
+//console.log(cart);
+saveToStorage();
 }
-export function remove_from_cart(productId){
+
+export function removeFromCart(productId){
     const newCart = [];
     cart.forEach((cartItem)=>{
         if(cartItem.productId !== productId){
@@ -36,4 +49,5 @@ export function remove_from_cart(productId){
         }
     });
     cart = newCart;
+    saveToStorage();
 }
